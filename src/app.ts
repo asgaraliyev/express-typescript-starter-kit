@@ -1,10 +1,8 @@
-import '../config/app.ts';
 import express, { Application, Request, Response } from 'express';
-import config from '../config';
-console.log('config', config);
+import config from './config';
 const app: Application = express();
 
-const port: number = 3001;
+const port = config.env.PORT;
 
 app.listen(port, function () {
   console.log(`App is listening on port ${port} !`);
